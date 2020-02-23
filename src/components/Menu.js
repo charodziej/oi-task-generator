@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { AppBar, Toolbar, Typography, makeStyles, Switch, useTheme, Drawer, IconButton, FormControlLabel } from '@material-ui/core'
+import { AppBar, Toolbar, Typography, makeStyles, Switch, useTheme, Drawer, IconButton, FormControlLabel, Link } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles(theme => ({
     title: {
@@ -51,6 +52,21 @@ export default function Menu({ changeTheme }) {
                         }
                         label="Dark mode"
                     />
+                    <Typography 
+                        component="p"
+                        variant="caption" 
+                        style={{
+                            marginTop: 8,
+                            marginBottom: 8, 
+                            textAlign: "center"
+                        }}
+                    >
+                        Made with {<FavoriteIcon style={{ fontSize: 12 }}/>} by <br />
+                        Lokinado & charodziej <br />
+                        <Link href="https://github.com/charodziej/oi-task-generator">
+                            View source
+                        </Link>
+                    </Typography>
                 </div>
             </Drawer>
         </div>
